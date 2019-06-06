@@ -1,12 +1,12 @@
 export const userData = {
 	name: "Dude McPherson",
 	description: "Just a dude bein' a dude.",
-	catchphrase: "Whoa...",
+	catchphrase: "Whoa..420.",
 	age: 26,
 }
 
 export const photo = {
-	title: "How Could You Do This?",
+	title: "How Could BEANSSSSSSSS?",
 	url: "https://media.giphy.com/media/hXafx5jj9HVBe/giphy.gif"
 }
 
