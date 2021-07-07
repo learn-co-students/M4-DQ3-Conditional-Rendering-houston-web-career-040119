@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MenuBar = (props) => {
+class MenuBar extends React.Component{
 
   /*
 
@@ -13,26 +13,30 @@ const MenuBar = (props) => {
 
   */
 
+  handleClick=(e)=>{
+    this.props.nathan(e.target.id)
+  }
+render(){
   return (
     <div className="ui four item menu">
-      <a className="item active" id="profile">
-        <i className="user large icon" id="profile"/>
+      <a className="item active" id="beans" onClick={(e)=>this.handleClick(e)}>
+        <i className="user large icon" id="beans2" />
       </a>
 
-      <a className="item" id="photo">
-        <i className="photo large icon" id="photo"/>
+      <a className="item" id="beans1" onClick={(e)=>this.handleClick(e)}>
+        <i className="photo large icon" id="beans" />
       </a>
 
-      <a className="item" id="cocktail">
-        <i className="cocktail large icon" id="cocktail"/>
+      <a className="item" id="beans2" onClick={(e)=>this.handleClick(e)}>
+        <i className="cocktail large icon" id="beans3" />
       </a>
 
-      <a className="item" id="pokemon"> 
-        <i className=" themeisle large icon" id="pokemon"/>
+      <a className="item" id="beans3" onClick={(e)=>this.handleClick(e)}> 
+        <i className=" themeisle large icon" id="beans1"/>
       </a>
     </div>
   )
-
+  }
 }
 
 export default MenuBar

@@ -4,6 +4,21 @@ import { Profile, Photos, Cocktails, Pokemon} from '../components/Pages.js'
 
 class MainBox extends React.Component {
 
+  constructor() {
+    super()
+    this.state = {
+      beans: "default"
+    }
+
+    
+  }
+
+  nathan=(e)=>{
+
+    this.setState({
+      beans:e
+    })
+  }
 
   render() {
 
@@ -15,10 +30,22 @@ class MainBox extends React.Component {
 
     const detailsToDisplay = <div>Hi, I'm a div!</div>
 
+    let bigBeans
+    if(this.state.beans=="beans"){
+      bigBeans=<Pokemon/>
+    }else if(this.state.beans=="beans2"){
+      bigBeans=<Profile/>
+    }else if(this.state.beans=="beans3"){
+      bigBeans=<Photos/>
+    }else if(this.state.beans=="beans1"){
+      bigBeans=<Cocktails/>
+    }
+    
+
     return (
       <div>
-        <MenuBar />
-        {detailsToDisplay}
+        <MenuBar nathan={this.nathan}/>
+        {bigBeans}       
       </div>
     )
   }
